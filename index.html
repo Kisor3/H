@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal for Kya</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    button, a {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    .page {
+      display: none;
+    }
+    .page.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <div id="page1" class="page active">
+    <h1>Hello Mam</h1>
+    <p>Please Click Continue</p>
+    <button onclick="nextPage('page2')">Continue →</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="page">
+    <h1>Hi Yes Tapai Kya</h1>
+    <p>I don’t know k vayo malai hau xyaaaa kasto yad aauxa ani kasto bolna man lagxa tara sakdina dar lagxa class ma herdha kasto cutee lagxa hereko herai garna man lagxa</p>
+    <button onclick="nextPage('page3')">Continue →</button>
+  </div>
+
+  <!-- Page 3 -->
+  <div id="page3" class="page">
+    <h1>I love to watch you. Sorry la, I like you.</h1>
+    <a href="https://youtu.be/Fnp4FmMLSAE?si=yO6-Hci3mn8_5fTd" target="_blank">Lala</a>
+    <a href="https://youtu.be/o2Jt1QOyOyI?si=rNGOgltQmd-MDifh" target="_blank">Vak</a>
+  </div>
+
+  <script>
+    function nextPage(pageId) {
+      // Hide all pages
+      document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+      });
+      // Show the selected page
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
